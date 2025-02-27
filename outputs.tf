@@ -4,6 +4,11 @@ output "acm_certificate_arn" {
   value       = aws_acm_certificate.this.arn
 }
 
+output "cloudflare_account_id" {
+  description = "The ID of the Cloudflare account"
+  value       = data.cloudflare_zone.this.account.id
+}
+
 output "cloudflare_zone_id" {
   description = "The ID of the Cloudflare zone"
   value       = data.cloudflare_zone.this.zone_id
